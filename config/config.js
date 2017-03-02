@@ -12,13 +12,15 @@ function CONFIG() {
 			NAME: "Development",
 			PORT: 3000,
 
+			REQUIRE_DB: false,
+
 			DB: {
 			  CONNECTION_LIMIT : 100,
 			  HOST		 				 : 'localhost',
 			  PORT     				 : 8889,
-			  USER     				 : 'root',
-			  PASSWORD 				 : 'Tr1b3c406',
-			  NAME 		 				 : 'kudo',
+			  USER     				 : 'user',
+			  PASSWORD 				 : 'password',
+			  NAME 		 				 : 'db',
 			  DEBUG    				 : false
 			},
 
@@ -32,13 +34,15 @@ function CONFIG() {
 			NAME: "Staging",
 			PORT: 3000,
 			
+			REQUIRE_DB: false,
+
 			DB: {
 			  CONNECTION_LIMIT : 100,
 			  HOST		 				 : 'localhost',
 			  PORT     				 : 8889,
-			  USER     				 : 'root',
-			  PASSWORD 				 : 'Tr1b3c406',
-			  NAME     				 : 'kudo',
+			  USER     				 : 'user',
+			  PASSWORD 				 : 'password',
+			  NAME 		 				 : 'db',
 			  DEBUG    				 : false
 			},
 
@@ -52,13 +56,15 @@ function CONFIG() {
 			NAME: "Live",
 			PORT: 3000,
 
+			REQUIRE_DB: false,
+
 			DB: {
 			  CONNECTION_LIMIT : 100,
 			  HOST		 				 : 'localhost',
 			  PORT     				 : 8889,
-			  USER     				 : 'root',
-			  PASSWORD 				 : 'Tr1b3c406',
-			  NAME 		 				 : 'kudo',
+			  USER     				 : 'user',
+			  PASSWORD 				 : 'password',
+			  NAME 		 				 : 'db',
 			  DEBUG    				 : false
 			},
 
@@ -74,7 +80,7 @@ function CONFIG() {
 	  NAME: package.name,
 	  VERSION: package.version,
 	  DESCRIPTION: package.description,
-	  STARTED: moment().format('Do MMMM YYYY, HH:mm:ss')
+	  STARTED: moment().format("Do MMMM YYYY, HH:mm:ss")
 	}
 
 	activeConfig.PORT = process.env.ENVIRONMENT || activeConfig.PORT;

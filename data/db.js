@@ -5,31 +5,37 @@ var config = require("../config/config.js");
 
 var initialised = false;
 
-var pool = mysql.createPool({
-    connectionLimit:    config.DB.CONNECTION_LIMIT,
-    host:               config.DB.HOST,
-    port:               config.DB.PORT,
-    user:               config.DB.USER,
-    password:           config.DB.PASSWORD,
-    database:           config.DB.NAME,
-    debug:              config.DB.DEBUG,
-    multipleStatements: true
-});  
+var pool;
+
+if (config.REQUIRE_DB){
+
+  pool = mysql.createPool({
+      connectionLimit:    config.DB.CONNECTION_LIMIT,
+      host:               config.DB.HOST,
+      port:               config.DB.PORT,
+      user:               config.DB.USER,
+      password:           config.DB.PASSWORD,
+      database:           config.DB.NAME,
+      debug:              config.DB.DEBUG,
+      multipleStatements: true
+  });  
 
 
-pool.getConnection(function(err, connection){
+  pool.getConnection(function(err, connection){
 
-  if (err) {
+    if (err) {
 
-      console.error("ERROR: Failed to connect to database");
-      if (!initialised) process.exit();
+        console.error("ERROR: Failed to connect to database");
+        if (!initialised) process.exit();
 
-  }else{
+    }else{
 
-    initialised = true;
+      initialised = true;
 
-  };
+    };
 
-})
+  })
+
+}
 
 module.exports = pool;
