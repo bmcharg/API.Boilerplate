@@ -11,20 +11,7 @@ function CONFIG() {
 
 			NAME: "Development",
 			PORT: 3000,
-
 			REQUIRE_DB: false,
-
-			DB: {
-			  CONNECTION_LIMIT : 100,
-			  HOST		 				 : 'localhost',
-			  PORT     				 : 8889,
-			  USER     				 : 'user',
-			  PASSWORD 				 : 'password',
-			  NAME 		 				 : 'db',
-			  DEBUG    				 : false
-			},
-
-			TRACKING_ID: '',
 			SHOW_DEBUG: true
 
 	  },
@@ -32,22 +19,9 @@ function CONFIG() {
 	  STAGING: {
 
 			NAME: "Staging",
-			PORT: 3000,
-			
+			PORT: 3000,			
 			REQUIRE_DB: false,
-
-			DB: {
-			  CONNECTION_LIMIT : 100,
-			  HOST		 				 : 'localhost',
-			  PORT     				 : 8889,
-			  USER     				 : 'user',
-			  PASSWORD 				 : 'password',
-			  NAME 		 				 : 'db',
-			  DEBUG    				 : false
-			},
-
-			TRACKING_ID: '',
-			SHOW_DEBUG: false
+			SHOW_DEBUG: true
 
 	  },
 
@@ -55,20 +29,7 @@ function CONFIG() {
 
 			NAME: "Live",
 			PORT: 3000,
-
 			REQUIRE_DB: false,
-
-			DB: {
-			  CONNECTION_LIMIT : 100,
-			  HOST		 				 : 'localhost',
-			  PORT     				 : 8889,
-			  USER     				 : 'user',
-			  PASSWORD 				 : 'password',
-			  NAME 		 				 : 'db',
-			  DEBUG    				 : false
-			},
-
-			TRACKING_ID: '',
 			SHOW_DEBUG: false  	
 
 	  }

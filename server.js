@@ -21,11 +21,15 @@ function SERVER(){
     app.use(bodyParser.json());
 
     // Bind router
-    app.use('/api', router);
+    // app.use('/', router);
+
+    app.use('/status', router);
+
+    app.use('/', express.static('www'));
+
 
     // Routes
-    var server_routes = require("./api/routes/server.route.js")(router);
-    var user_routes = require("./api/routes/user.route.js")(router);
+    var status_route = require("./api/routes/status.route.js")(router);
 
     // Clear the console
     process.stdout.write('\033c');
@@ -37,7 +41,6 @@ function SERVER(){
       console.log("STARTED: " + config.APP.STARTED);
       console.log("ENVIRONMENT: " + config.NAME);
       console.log("PORT: " + config.PORT);
-      console.log("DATABSE: " + config.DB.HOST);
       console.log("==================================================================");
       console.log();
     });

@@ -1,0 +1,116 @@
+<html>
+
+	<head>
+
+		<style>
+
+			body {
+				margin: 0;
+				padding: 0;
+			}
+
+			table {
+
+				font-family: Arial;
+				font-size: 12px;
+
+				/*border: 1px solid #ccc;*/
+
+			}
+
+			tr {
+				height: 30px;
+			}
+
+			td {
+				padding: 5px;
+				border: 1px solid #ccc;
+			 vertical-align: middle;
+			}
+
+			td.bold {
+				font-weight: bold;
+			}
+
+			td.status {
+				padding: 0;
+				width: 80px;
+			 vertical-align: middle;
+
+			}
+
+			.header {
+				background: #eee;
+			}
+
+			.statusOutput {
+				width: 80px;
+				height: 35px;
+			}
+
+			.good {
+				background: #0f0;
+			}
+
+			.bad {
+				background: #f00;
+			}
+
+		</style>
+
+	</head>
+
+	<body onLoad="init()">
+
+		<table>
+
+			<tr>
+				<td class="header bold">SERVICE</td>
+				<td class="header bold">URL</td>
+				<td class="header bold" align="center">STATUS</td>
+			</tr>
+
+			<tr>
+				<td class="bold">API</td>
+				<td>https://buzz-app.api.bbci.co.uk</td>
+				<td class="status" align="center" valign="middle" id="apiStatus">
+						<img src="https://media.giphy.com/media/11IC43C8cItmhO/giphy.gif" width="10" height="10"/>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="bold">CMS</td>
+				<td>https://buzz-cms.tools.bbc.co.uk</td>
+				<td class="status" align="center" id="cmsStatus">
+					<img src="https://media.giphy.com/media/11IC43C8cItmhO/giphy.gif" width="10" height="10"/>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="bold">MODERATION</td>
+				<td>https://buzz-moderation.tools.bbc.co.uk</td>
+				<td class="status" align="center" id="moderationStatus">
+					<img src="https://media.giphy.com/media/11IC43C8cItmhO/giphy.gif" width="10" height="10"/>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="bold">CONFIG</td>
+				<td>https://buzz-config.files.bbci.co.uk</td>
+				<td class="status" align="center" id="configStatus">
+					<img src="https://media.giphy.com/media/11IC43C8cItmhO/giphy.gif" width="10" height="10"/>
+				</td>
+			</tr>
+
+		</table>
+
+		<!-- <h1>API <span id="apiStatus"></span></h1> -->
+		<!-- <h1>CMS <span id="cmsStatus"></span></h1> -->
+		<!-- <h1>MODERATION <span id="moderationStatus"></span></h1> -->
+		<!-- <h1>CONFIG <span id="configStatus"></span></h1> -->
+
+	</body>
+
+	<script src="js/status.js"></script>
+
+</html>
